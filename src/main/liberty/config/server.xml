@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <featureManager>
+        <!-- tag::servlet[] -->
+        <feature>servlet-4.0</feature>
+        <!-- end::servlet[] -->
+        <!-- tag::springboot[] -->
+        <feature>springBoot-2.0</feature>
+        <!-- end::springboot[] -->
+    </featureManager>
+
+    <!-- tag::httpport[] -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  host="*"
+                  httpPort="9080"
+                  httpsPort="9443" />
+    <!-- end::httpport[] -->
+
+    <!-- tag::springBootApplication[] -->
+    <springBootApplication id="demo-springboot-openliberty"
+                           location="thin-demo-springboot-openliberty-0.0.1-SNAPSHOT.jar"
+                           name="demo-springboot-openliberty" />
+    <!-- end::springBootApplication[] -->
+
+</server>
